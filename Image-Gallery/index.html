@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Responsive Image Gallery</title>
+
+<!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome (for social icons) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="public/css/global.css">
+<script src="public/js/global.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<div class="container mt-4">
+<h2 class="text-center mb-3">Image Gallery</h2>
+
+<!-- FILTER -->
+<div class="text-center mb-4">
+<button class="btn btn-dark filter-btn" onclick="filterImages('all')">All</button>
+<button class="btn btn-dark filter-btn" onclick="filterImages('nature')">Nature</button>
+<button class="btn btn-dark filter-btn" onclick="filterImages('sea')">Sea</button>
+</div>
+
+<div class="row gallery">
+
+<div class="col-md-4 col-sm-6 mb-4 image nature">
+<img src="public/image/image1.webp" onclick="openLightbox(0)">
+</div>
+
+<div class="col-md-4 col-sm-6 mb-4 image nature">
+<img src="public/image/image2.webp" onclick="openLightbox(1)">
+</div>
+
+<div class="col-md-4 col-sm-6 mb-4 image nature">
+<img src="public/image/image3.webp" onclick="openLightbox(2)">
+</div>
+
+<div class="col-md-4 col-sm-6 mb-4 image sea">
+<img src="public/image/image4.webp" onclick="openLightbox(3)">
+</div>
+
+<div class="col-md-4 col-sm-6 mb-4 image sea">
+<img src="public/image/image5.webp" onclick="openLightbox(4)">
+</div>
+
+<div class="col-md-4 col-sm-6 mb-4 image sea">
+<img src="public/image/image6.webp" onclick="openLightbox(5)">
+</div>
+
+</div>
+</div>
+
+<!-- LIGHTBOX WITH HORIZONTAL SLIDER -->
+<div class="lightbox" id="lightbox">
+<span class="close" onclick="closeLightbox()">✖</span>
+<span class="prev" onclick="changeImage(-1)">❮</span>
+
+<div class="slider-container">
+    <div class="slider" id="slider">
+        <img src="public/image/image1.webp">
+        <img src="public/image/image2.webp">
+        <img src="public/image/image3.webp">
+        <img src="public/image/image4.webp">
+        <img src="public/image/image5.webp">
+        <img src="public/image/image6.webp">
+    </div>
+</div>
+
+<span class="next" onclick="changeImage(1)">❯</span>
+</div>
+<!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 Your Company. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="social-icons">
+                        <a href="#" class="fab fa-facebook-f" title="Facebook"></a>
+                        <a href="#" class="fab fa-twitter" title="Twitter"></a>
+                        <a href="#" class="fab fa-linkedin-in" title="LinkedIn"></a>
+                        <a href="#" class="fab fa-instagram" title="Instagram"></a>
+                    </div>
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+</html>
